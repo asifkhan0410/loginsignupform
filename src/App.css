@@ -26,7 +26,7 @@
   font-size: 4rem;
   font-weight: 300;
 }
-.buttons > button, #send{
+.login, .signup, .back, #send{
     color: #faf8f9;
     background-color: #161009;
     padding: 10px 30px;
@@ -36,12 +36,24 @@
     font-weight: bold;
     border-radius: 5px;
 }
+.file-uploader{
+  display: flex;
+  padding: 10px;
+}
+.file-uploader> button{
+  display: none;
+}
 .buttons{
   display: flex;
   width: 80%;
   justify-content: space-around;
 }
-.loginpage, .signuppage{
+.buttons__signup,.buttons__login{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.loginpage, .signuppage, .signupsuccess, .dashboard{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +65,7 @@
     box-shadow: 10px 10px 0px black;
 }
 .entity{
-  display: flex;
+    display: flex;
     justify-content: space-between;
     padding: 10px;
 }
@@ -63,13 +75,33 @@
     font-weight: 300;
 }
 .signuppage > form > button, .loginpage>form> button{
-  margin: 10% 24%;
+  margin: 10% 5%;
 }
-.signuppage>h1 , .loginpage>h1{
+.signuppage>h1 , .loginpage>h1, .signupsuccess > h1, .dashboard >h1{
   font-weight: 300;
   font-size: 3rem;
 }
 .entity > input{
   border-radius: 4px;
     border-width: 1px;
+}
+.signupsuccess > h1{
+  margin-bottom:0px ;
+}
+.signupsuccess__message {
+  display: flex;
+  margin: 40px 0px;
+}
+
+.signupsuccess__message>h1,.loginsuccess__message>h1{
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.username{
+  font-weight: 600;
+}
+
+.loginsuccess__message{
+    margin: 20px;
+    text-align: center;
 }
