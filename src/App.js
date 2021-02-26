@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function App() {
   const [user, setUser] = useState(null);
-  console.log(user)
+  
   return (
     <Router>
     <div className="app">
@@ -19,6 +19,7 @@ function App() {
               <div className="loginsuccess__message">
                 <h1>Welcome to the dashboad <br/>
                 <span className = "username">{user!==null? user[0] : ""}</span></h1>
+                <Link to="/"><button className="back" onClick={() => setUser(null)}>LogOut</button></Link>
               </div>            
             </div>
           </Route>
