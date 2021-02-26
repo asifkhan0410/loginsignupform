@@ -18,7 +18,7 @@ function App() {
               <h1>C Player</h1>
               <div className="loginsuccess__message">
                 <h1>Welcome to the dashboad <br/>
-                <span className = "username">{user[0]}</span></h1>
+                <span className = "username">{user!==null? user[0] : ""}</span></h1>
               </div>            
             </div>
           </Route>

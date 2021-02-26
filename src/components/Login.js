@@ -14,21 +14,23 @@ function Login({userset}) {
         })
         const user = data[index[0]];
         if(password === data[index[0]][2]){
-            console.log("login success");
-            setUsername('');
-            setPassword('');
-            alert(`Login Successful ${data[index[0]][0]}`);
             userset(user);
+            history.push('/loginsuccess')
+        }else{
+            alert("username/password is wrong")
         }
-        history.push('/loginsuccess')
+        
+        setUsername('');
+        setPassword('');
     }
-    // setToggle(false);
+    
+
     return (
         <div className="loginpage">
         <h1>C Player</h1>
         <form>
-            <div className="entity"><span className="text">Username </span><input type="text" id="username" placeholder="UserName" onChange={(e)=> setUsername(e.target.value) }/></div>
-            <div className="entity"><span className="text">Password </span><input type="password" id="password" placeholder="Password" onChange={(e)=> setPassword(e.target.value) } /></div>
+            <div className="entity"><span className="text">Username </span><input type="text" id="username" placeholder="UserName" value={username} onChange={(e)=> setUsername(e.target.value) }/></div>
+            <div className="entity"><span className="text">Password </span><input type="password" id="password" placeholder="Password" value={password} onChange={(e)=> setPassword(e.target.value) } /></div>
         
             <div className="buttons__login">
                 <button id="send" onClick={loginsuccess} type="submit" >Login</button>
