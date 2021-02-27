@@ -15,7 +15,7 @@ function Login({userset}) {
         const user = data[index[0]];
         if(password === data[index[0]][2]){
             userset(user);
-            history.push('/loginsuccess')
+            history.push('/loginsuccess') // this changes the url with the required route
         }else{
             alert("username/password is wrong")
         }
